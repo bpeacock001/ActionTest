@@ -17,4 +17,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Get the GH variables
         run: 
-          echo Built by $GITHUB_ACTOR
+          echo Built by $GITHUB_SHA
