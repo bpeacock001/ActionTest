@@ -12,8 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   merge_to_master:
     runs-on: windows-latest
-    steps:     
-      - uses: actions/checkout@v2 
+    steps:            
       - env: 
           GITHUB_CONTEXT: ${{ toJson(github) }}
 
