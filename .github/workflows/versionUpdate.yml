@@ -12,11 +12,9 @@ jobs:
   # This workflow contains a single job called "build"
   merge_to_master:
     runs-on: windows-latest
-    steps:            
-      - env: 
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-
+    steps:          
+      
       # Runs a set of commands using the runners shell
       - name: Get the GH variables
         run: 
-          echo Add other actions to build
+          echo Built by $GITHUB_ACTOR
