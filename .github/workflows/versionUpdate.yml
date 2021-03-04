@@ -15,7 +15,7 @@ jobs:
     steps:     
       - uses: actions/checkout@v2 
       - env: 
-          gh: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
 
       # Runs a set of commands using the runners shell
       - name: Get the GH variables
