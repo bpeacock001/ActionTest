@@ -14,9 +14,11 @@ jobs:
     runs-on: windows-latest
     steps:        
      - name: Get Latest Tag
+       env:
+         GITHUB_CONTEXT: ${{ toJson(github) }}
        uses: oprypin/find-latest-tag@v1.1.0
        with:
-        repository: "$github.repositoryUrl"
+        repository: "$GITHUB_CONTEXT.repositoryUrl"
 
           
           
