@@ -16,7 +16,7 @@ jobs:
      - name: Get Latest Tag
        uses: oprypin/find-latest-tag@v1.1.0
        with:
-        repository: "api.github.com/repos/bpeacock001/ActionTest/git/refs/"
+        repository: "api.github.com/repos/bpeacock001/ActionTest/git/refs"
 
           
           
