@@ -16,7 +16,7 @@ jobs:
      - name: Get Latest Tag
        env:
          GITHUB_CONTEXT: ${{ toJson(github) }}
-       uses: oprypin/find-latest-tag@v1.1.0
+       #uses: oprypin/find-latest-tag@v1.1.0
      - run: echo $GITHUB_CONTEXT.repositoryUrl
 
           
