@@ -12,15 +12,9 @@ jobs:
   # This workflow contains a single job called "build"
   merge_to_master:
     runs-on: windows-latest
-    steps:          
-     - name: Dump GitHub context
-       env:
-          GITHUB_CONTEXT: ${{ toJson(env) }}
-       run: echo "$GITHUB_CONTEXT"
-      # Runs a set of commands using the runners shell
+    steps:    
      - name: Get the GH variables
-       run: |
-          echo "Workspace: $GITHUB_WORKSPACE"
-          echo "Tag ref: $GITHUB_REF"
+       run: |        
+          echo "Tag ref: $github.ref"
           
           
