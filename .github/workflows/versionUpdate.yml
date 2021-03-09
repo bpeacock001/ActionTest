@@ -14,7 +14,9 @@ jobs:
     runs-on: windows-latest
     steps:        
      - name: Get Latest Tag
-       uses: WyriHaximus/github-action-get-previous-tag@1.0.0
+       uses: oprypin/find-latest-tag@v1.1.0
+       with:
+        repository: "api.github.com/repos/bpeacock001/ActionTest/git/refs/"
 
           
           
