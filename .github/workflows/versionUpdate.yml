@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
 on:
@@ -12,12 +10,12 @@ jobs:
   # This workflow contains a single job called "build"
   merge_to_master:
     runs-on: windows-latest
-    steps:        
-     - name: Get Latest Tag
+    steps:    
+     - name: Get the GH variables     
        env:
          GITHUB_CONTEXT: ${{ toJson(github) }}
-       #uses: oprypin/find-latest-tag@v1.1.0
-     - run: echo $GITHUB_CONTEXT.repositoryUrl
-
-          
-          
+       run: echo "$GITHUB_CONTEXT"
+     - name: Get the GH variables     
+       env:
+         GITHUB_CONTEXT: ${{ toJson(github) }}       
+       run: echo "$GITHUB_CONTEXT.repositoryUrl"
